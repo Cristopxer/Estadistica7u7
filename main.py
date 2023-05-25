@@ -14,49 +14,49 @@ def ln_regressor(df):
 
 
 st.video('https://res.cloudinary.com/dnxwnoyn1/video/upload/v1684995733/Rick_Astley_-_Never_Gonna_Give_You_Up_Official_Music_Video_ut4gcu.mp4', format='video/mp4', start_time=0)
-st.header('Pideselo a ChatGPT')
-st.markdown("<h1 style='text-align: center;'><img src='https://umg.edu.gt/privacidad/img/logo.png'/></h1>", unsafe_allow_html=True)
-st.markdown("<h1 style='text-align: center; color: grey;'>Regresion Linear</h1>", unsafe_allow_html=True)
-st.divider()
-st.subheader('Suba sus datos')
-file = st.file_uploader(label='Cargue su archivo .csv', type='csv', help='Archivo csv con formato (x,y)')
+st.markdown("<h1 style='text-align: center;'>Pideselo a ChatGPT uwu</h1>", unsafe_allow_html=True)
+# st.markdown("<h1 style='text-align: center;'><img src='https://umg.edu.gt/privacidad/img/logo.png'/></h1>", unsafe_allow_html=True)
+# st.markdown("<h1 style='text-align: center; color: grey;'>Regresion Linear</h1>", unsafe_allow_html=True)
+# st.divider()
+# st.subheader('Suba sus datos')
+# file = st.file_uploader(label='Cargue su archivo .csv', type='csv', help='Archivo csv con formato (x,y)')
 
-if file is not None:
-    df = pd.read_csv(file)
-    df = df.sort_values('x')
+# if file is not None:
+#     df = pd.read_csv(file)
+#     df = df.sort_values('x')
 
-    st.caption('Previsualizacion de los datos:')
-    st.dataframe(df.head())
+#     st.caption('Previsualizacion de los datos:')
+#     st.dataframe(df.head())
 
-    st.divider()
-    st.subheader('Grafico de datos')
-    fig = px.line(df, x='x', y='y', markers=True)
-    st.plotly_chart(fig)
+#     st.divider()
+#     st.subheader('Grafico de datos')
+#     fig = px.line(df, x='x', y='y', markers=True)
+#     st.plotly_chart(fig)
 
-    st.divider()
-    st.subheader('Formula')
-    model = ln_regressor(df)
-    m = model.coef_[0][0]
-    c = model.intercept_[0]
-    label = r'$x = %0.4f*y %+0.4f$'%(m,c)
-    st.header(label)
+#     st.divider()
+#     st.subheader('Formula')
+#     model = ln_regressor(df)
+#     m = model.coef_[0][0]
+#     c = model.intercept_[0]
+#     label = r'$x = %0.4f*y %+0.4f$'%(m,c)
+#     st.header(label)
 
-    st.divider()
-    st.subheader('Regresion Linear 7u7')    
-    x = df['x']
-    y = df['y']
-    x_range = np.linspace(x.min(), x.max(), 100).reshape(-1,1)
-    y_range = model.predict(x_range)
+#     st.divider()
+#     st.subheader('Regresion Linear 7u7')    
+#     x = df['x']
+#     y = df['y']
+#     x_range = np.linspace(x.min(), x.max(), 100).reshape(-1,1)
+#     y_range = model.predict(x_range)
 
-    fig = go.Figure([
-        go.Scatter(x = x, y = y, name='Current values'),    
-        go.Scatter(x = x_range.squeeze(), y = y_range.squeeze(), name = 'Regresion Linear')
-    ])
-    st.plotly_chart(fig)
+#     fig = go.Figure([
+#         go.Scatter(x = x, y = y, name='Current values'),    
+#         go.Scatter(x = x_range.squeeze(), y = y_range.squeeze(), name = 'Regresion Linear')
+#     ])
+#     st.plotly_chart(fig)
 
-    st.divider()
-    st.subheader('Resultados de la regresion')
-    ols = sm.OLS(x, y)
-    ols_result = ols.fit()
-    ols_summary = ols_result.summary()
-    st.write(ols_summary)
+#     st.divider()
+#     st.subheader('Resultados de la regresion')
+#     ols = sm.OLS(x, y)
+#     ols_result = ols.fit()
+#     ols_summary = ols_result.summary()
+#     st.write(ols_summary)
