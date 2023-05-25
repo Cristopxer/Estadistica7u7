@@ -58,12 +58,3 @@ if file is not None:
     ols_result = ols.fit()
     ols_summary = ols_result.summary()
     st.write(ols_summary)
-
-
-
-
-
-
-
-
-
