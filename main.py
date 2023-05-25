@@ -13,6 +13,8 @@ def ln_regressor(df):
     return linear_regressor.fit(x, y)
 
 
+st.video('https://res.cloudinary.com/dnxwnoyn1/video/upload/v1684995733/Rick_Astley_-_Never_Gonna_Give_You_Up_Official_Music_Video_ut4gcu.mp4', format='video/mp4', start_time=0)
+st.header('Pideselo a ChatGPT')
 st.markdown("<h1 style='text-align: center;'><img src='https://umg.edu.gt/privacidad/img/logo.png'/></h1>", unsafe_allow_html=True)
 st.markdown("<h1 style='text-align: center; color: grey;'>Regresion Linear</h1>", unsafe_allow_html=True)
 st.divider()
